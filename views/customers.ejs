@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-3xl mx-auto p-4">
+        <div class="flex place-content-between">
+        <h1 class="text-2xl font-bold mb-4">All Customers</h1>
+        <a href="/" class="text-blue-500 hover:underline block pt-2">
+            Home
+        </a>
+        </div>
+        <ul class="space-y-2">
+            <% customers.forEach(customer => { %>
+                <li class="bg-white p-4 rounded shadow-md flex justify-between items-center">
+                    <div>
+                        <span class="font-semibold text-gray-800">
+                            <%= customer.name %>
+                        </span>
+                        <span class="text-gray-500 ml-2">
+                            $<%= customer.balance %>
+                        </span>
+                    </div>
+                    <div>
+                        <a href="/transfer/<%= customer._id %>"
+                           class="text-blue-500 hover:underline">
+                            Transfer Money
+                        </a>
+                    </div>
+                </li>
+                
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>
