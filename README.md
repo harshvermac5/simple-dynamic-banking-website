@@ -30,7 +30,7 @@ To set up the project locally, follow these steps:
 
 2. **Install dependencies**:
    ```bash
-   npm install
+   npm install express ejs mongoose
    ```
 
 3. **Configure MongoDB**:
